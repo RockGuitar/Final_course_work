@@ -1,19 +1,18 @@
 package ru.skypro.homework.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "user")
 public class Ads {
     @Id
     @GeneratedValue
-
+    private Integer id;
     private Integer author;
     private String image;
-    private Integer pk;
     private Integer price;
     private String title;
 
@@ -33,12 +32,12 @@ public class Ads {
         this.image = image;
     }
 
-    public Integer getPk () {
-        return pk;
+    public Integer getId () {
+        return id;
     }
 
-    public void setPk ( Integer pk ) {
-        this.pk = pk;
+    public void setId ( Integer pk ) {
+        this.id = id;
     }
 
     public Integer getPrice () {

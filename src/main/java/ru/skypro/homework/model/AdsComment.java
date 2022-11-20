@@ -1,6 +1,5 @@
 package ru.skypro.homework.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,10 +10,10 @@ import java.time.OffsetDateTime;
 public class AdsComment {
     @Id
     @GeneratedValue
+    private Integer id;
 
     private Integer author;
     private OffsetDateTime createdAt;
-    private Integer pk;
     private String text;
 
     public Integer getAuthor () {
@@ -33,12 +32,12 @@ public class AdsComment {
         this.createdAt = createdAt;
     }
 
-    public Integer getPk () {
-        return pk;
+    public Integer getId () {
+        return id;
     }
 
-    public void setPk ( Integer pk ) {
-        this.pk = pk;
+    public void setId ( Integer pk ) {
+        this.id = id;
     }
 
     public String getText () {

@@ -4,9 +4,6 @@ import org.springframework.stereotype.Service;
 import ru.skypro.homework.model.User;
 @Service
 public interface UserService {
-
-    User createUser ( User user);
-
     User readUser ( Long id );
 
     User updateUser ( User user );

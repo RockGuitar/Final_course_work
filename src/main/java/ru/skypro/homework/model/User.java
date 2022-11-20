@@ -10,11 +10,11 @@ import javax.persistence.Id;
 public class User {
     @Id
     @GeneratedValue
+    private Integer id;
 
     private String email;
     private String firstName;
     private String lastName;
     private String phone;
-    private Integer id;
 
 }
