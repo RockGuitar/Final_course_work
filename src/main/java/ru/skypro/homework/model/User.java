@@ -1,0 +1,20 @@
+package ru.skypro.homework.model;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class User {
+    @Id
+    @GeneratedValue
+
+    private String email;
+    private String firstName;
+    private String lastName;
+    private String phone;
+    private Integer id;
+
+}

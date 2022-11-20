@@ -4,31 +4,32 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.validation.annotation.Validated;
 
-import javax.validation.Valid;
-import java.time.OffsetDateTime;
 import java.util.Objects;
 
 /**
- * AdsComment
+ * Ads
  */
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2022-11-20T12:17:45.689Z[GMT]")
 
 
-public class AdsComment   {
+public class AdsDto {
   @JsonProperty("author")
   private Integer author = null;
 
-  @JsonProperty("createdAt")
-  private OffsetDateTime createdAt = null;
+  @JsonProperty("image")
+  private String image = null;
 
   @JsonProperty("pk")
   private Integer pk = null;
 
-  @JsonProperty("text")
-  private String text = null;
+  @JsonProperty("price")
+  private Integer price = null;
 
-  public AdsComment author(Integer author) {
+  @JsonProperty("title")
+  private String title = null;
+
+  public AdsDto author( Integer author) {
     this.author = author;
     return this;
   }
@@ -47,27 +48,26 @@ public class AdsComment   {
     this.author = author;
   }
 
-  public AdsComment createdAt(OffsetDateTime createdAt) {
-    this.createdAt = createdAt;
+  public AdsDto image( String image) {
+    this.image = image;
     return this;
   }
 
   /**
-   * Get createdAt
-   * @return createdAt
+   * Get image
+   * @return image
    **/
   @Schema(description = "")
   
-    @Valid
-    public OffsetDateTime getCreatedAt() {
-    return createdAt;
+    public String getImage() {
+    return image;
   }
 
-  public void setCreatedAt(OffsetDateTime createdAt) {
-    this.createdAt = createdAt;
+  public void setImage(String image) {
+    this.image = image;
   }
 
-  public AdsComment pk(Integer pk) {
+  public AdsDto pk( Integer pk) {
     this.pk = pk;
     return this;
   }
@@ -86,23 +86,42 @@ public class AdsComment   {
     this.pk = pk;
   }
 
-  public AdsComment text(String text) {
-    this.text = text;
+  public AdsDto price( Integer price) {
+    this.price = price;
     return this;
   }
 
   /**
-   * Get text
-   * @return text
+   * Get price
+   * @return price
    **/
   @Schema(description = "")
   
-    public String getText() {
-    return text;
+    public Integer getPrice() {
+    return price;
   }
 
-  public void setText(String text) {
-    this.text = text;
+  public void setPrice(Integer price) {
+    this.price = price;
+  }
+
+  public AdsDto title( String title) {
+    this.title = title;
+    return this;
+  }
+
+  /**
+   * Get title
+   * @return title
+   **/
+  @Schema(description = "")
+  
+    public String getTitle() {
+    return title;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
   }
 
 
@@ -114,27 +133,29 @@ public class AdsComment   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AdsComment adsComment = (AdsComment) o;
-    return Objects.equals(this.author, adsComment.author) &&
-        Objects.equals(this.createdAt, adsComment.createdAt) &&
-        Objects.equals(this.pk, adsComment.pk) &&
-        Objects.equals(this.text, adsComment.text);
+    AdsDto ads = (AdsDto) o;
+    return Objects.equals(this.author, ads.author) &&
+        Objects.equals(this.image, ads.image) &&
+        Objects.equals(this.pk, ads.pk) &&
+        Objects.equals(this.price, ads.price) &&
+        Objects.equals(this.title, ads.title);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(author, createdAt, pk, text);
+    return Objects.hash(author, image, pk, price, title);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AdsComment {\n");
+    sb.append("class Ads {\n");
     
     sb.append("    author: ").append(toIndentedString(author)).append("\n");
-    sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
+    sb.append("    image: ").append(toIndentedString(image)).append("\n");
     sb.append("    pk: ").append(toIndentedString(pk)).append("\n");
-    sb.append("    text: ").append(toIndentedString(text)).append("\n");
+    sb.append("    price: ").append(toIndentedString(price)).append("\n");
+    sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("}");
     return sb.toString();
   }

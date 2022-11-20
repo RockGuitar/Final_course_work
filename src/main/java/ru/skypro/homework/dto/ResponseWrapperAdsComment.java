@@ -22,7 +22,7 @@ public class ResponseWrapperAdsComment   {
 
   @JsonProperty("results")
   @Valid
-  private List<AdsComment> results = null;
+  private List<AdsCommentDto> results = null;
 
   public ResponseWrapperAdsComment count(Integer count) {
     this.count = count;
@@ -43,14 +43,14 @@ public class ResponseWrapperAdsComment   {
     this.count = count;
   }
 
-  public ResponseWrapperAdsComment results(List<AdsComment> results) {
+  public ResponseWrapperAdsComment results(List<AdsCommentDto> results) {
     this.results = results;
     return this;
   }
 
-  public ResponseWrapperAdsComment addResultsItem(AdsComment resultsItem) {
+  public ResponseWrapperAdsComment addResultsItem( AdsCommentDto resultsItem) {
     if (this.results == null) {
-      this.results = new ArrayList<AdsComment>();
+      this.results = new ArrayList<AdsCommentDto>();
     }
     this.results.add(resultsItem);
     return this;
@@ -62,11 +62,11 @@ public class ResponseWrapperAdsComment   {
    **/
   @Schema(description = "")
       @Valid
-    public List<AdsComment> getResults() {
+    public List<AdsCommentDto> getResults() {
     return results;
   }
 
-  public void setResults(List<AdsComment> results) {
+  public void setResults(List<AdsCommentDto> results) {
     this.results = results;
   }
 

@@ -13,14 +13,14 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2022-11-20T12:17:45.689Z[GMT]")
 
 
-public class NewPassword   {
+public class NewPasswordDto {
   @JsonProperty("currentPassword")
   private String currentPassword = null;
 
   @JsonProperty("newPassword")
   private String newPassword = null;
 
-  public NewPassword currentPassword(String currentPassword) {
+  public NewPasswordDto currentPassword( String currentPassword) {
     this.currentPassword = currentPassword;
     return this;
   }
@@ -39,7 +39,7 @@ public class NewPassword   {
     this.currentPassword = currentPassword;
   }
 
-  public NewPassword newPassword(String newPassword) {
+  public NewPasswordDto newPassword( String newPassword) {
     this.newPassword = newPassword;
     return this;
   }
@@ -67,7 +67,7 @@ public class NewPassword   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    NewPassword newPassword = (NewPassword) o;
+    NewPasswordDto newPassword = (NewPasswordDto) o;
     return Objects.equals(this.currentPassword, newPassword.currentPassword) &&
         Objects.equals(this.newPassword, newPassword.newPassword);
   }

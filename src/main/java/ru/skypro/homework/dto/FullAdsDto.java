@@ -13,7 +13,7 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2022-11-20T12:17:45.689Z[GMT]")
 
 
-public class FullAds   {
+public class FullAdsDto {
   @JsonProperty("authorFirstName")
   private String authorFirstName = null;
 
@@ -41,7 +41,7 @@ public class FullAds   {
   @JsonProperty("title")
   private String title = null;
 
-  public FullAds authorFirstName(String authorFirstName) {
+  public FullAdsDto authorFirstName( String authorFirstName) {
     this.authorFirstName = authorFirstName;
     return this;
   }
@@ -60,7 +60,7 @@ public class FullAds   {
     this.authorFirstName = authorFirstName;
   }
 
-  public FullAds authorLastName(String authorLastName) {
+  public FullAdsDto authorLastName( String authorLastName) {
     this.authorLastName = authorLastName;
     return this;
   }
@@ -79,7 +79,7 @@ public class FullAds   {
     this.authorLastName = authorLastName;
   }
 
-  public FullAds description(String description) {
+  public FullAdsDto description( String description) {
     this.description = description;
     return this;
   }
@@ -98,7 +98,7 @@ public class FullAds   {
     this.description = description;
   }
 
-  public FullAds email(String email) {
+  public FullAdsDto email( String email) {
     this.email = email;
     return this;
   }
@@ -117,7 +117,7 @@ public class FullAds   {
     this.email = email;
   }
 
-  public FullAds image(String image) {
+  public FullAdsDto image( String image) {
     this.image = image;
     return this;
   }
@@ -136,7 +136,7 @@ public class FullAds   {
     this.image = image;
   }
 
-  public FullAds phone(String phone) {
+  public FullAdsDto phone( String phone) {
     this.phone = phone;
     return this;
   }
@@ -155,7 +155,7 @@ public class FullAds   {
     this.phone = phone;
   }
 
-  public FullAds pk(Integer pk) {
+  public FullAdsDto pk( Integer pk) {
     this.pk = pk;
     return this;
   }
@@ -174,7 +174,7 @@ public class FullAds   {
     this.pk = pk;
   }
 
-  public FullAds price(Integer price) {
+  public FullAdsDto price( Integer price) {
     this.price = price;
     return this;
   }
@@ -193,7 +193,7 @@ public class FullAds   {
     this.price = price;
   }
 
-  public FullAds title(String title) {
+  public FullAdsDto title( String title) {
     this.title = title;
     return this;
   }
@@ -221,7 +221,7 @@ public class FullAds   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    FullAds fullAds = (FullAds) o;
+    FullAdsDto fullAds = (FullAdsDto) o;
     return Objects.equals(this.authorFirstName, fullAds.authorFirstName) &&
         Objects.equals(this.authorLastName, fullAds.authorLastName) &&
         Objects.equals(this.description, fullAds.description) &&

@@ -2,35 +2,34 @@ package ru.skypro.homework.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.Data;
 import org.springframework.validation.annotation.Validated;
 
 import java.util.Objects;
 
 /**
- * User
+ * CreateUser
  */
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2022-11-20T12:17:45.689Z[GMT]")
 
-@Data
-public class User   {
+
+public class CreateUserDto {
   @JsonProperty("email")
   private String email = null;
 
   @JsonProperty("firstName")
   private String firstName = null;
 
-  @JsonProperty("id")
-  private Integer id = null;
-
   @JsonProperty("lastName")
   private String lastName = null;
+
+  @JsonProperty("password")
+  private String password = null;
 
   @JsonProperty("phone")
   private String phone = null;
 
-  public User email(String email) {
+  public CreateUserDto email( String email) {
     this.email = email;
     return this;
   }
@@ -49,7 +48,7 @@ public class User   {
     this.email = email;
   }
 
-  public User firstName(String firstName) {
+  public CreateUserDto firstName( String firstName) {
     this.firstName = firstName;
     return this;
   }
@@ -68,26 +67,7 @@ public class User   {
     this.firstName = firstName;
   }
 
-  public User id(Integer id) {
-    this.id = id;
-    return this;
-  }
-
-  /**
-   * Get id
-   * @return id
-   **/
-  @Schema(description = "")
-  
-    public Integer getId() {
-    return id;
-  }
-
-  public void setId(Integer id) {
-    this.id = id;
-  }
-
-  public User lastName(String lastName) {
+  public CreateUserDto lastName( String lastName) {
     this.lastName = lastName;
     return this;
   }
@@ -106,7 +86,26 @@ public class User   {
     this.lastName = lastName;
   }
 
-  public User phone(String phone) {
+  public CreateUserDto password( String password) {
+    this.password = password;
+    return this;
+  }
+
+  /**
+   * Get password
+   * @return password
+   **/
+  @Schema(description = "")
+  
+    public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
+  }
+
+  public CreateUserDto phone( String phone) {
     this.phone = phone;
     return this;
   }
@@ -134,28 +133,28 @@ public class User   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    User user = (User) o;
-    return Objects.equals(this.email, user.email) &&
-        Objects.equals(this.firstName, user.firstName) &&
-        Objects.equals(this.id, user.id) &&
-        Objects.equals(this.lastName, user.lastName) &&
-        Objects.equals(this.phone, user.phone);
+    CreateUserDto createUser = (CreateUserDto) o;
+    return Objects.equals(this.email, createUser.email) &&
+        Objects.equals(this.firstName, createUser.firstName) &&
+        Objects.equals(this.lastName, createUser.lastName) &&
+        Objects.equals(this.password, createUser.password) &&
+        Objects.equals(this.phone, createUser.phone);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(email, firstName, id, lastName, phone);
+    return Objects.hash(email, firstName, lastName, password, phone);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class User {\n");
+    sb.append("class CreateUser {\n");
     
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
+    sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("    phone: ").append(toIndentedString(phone)).append("\n");
     sb.append("}");
     return sb.toString();

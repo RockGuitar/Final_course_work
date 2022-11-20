@@ -16,15 +16,15 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2022-11-20T12:17:45.689Z[GMT]")
 
 
-public class ResponseWrapperAds   {
+public class ResponseWrapperAdsDto {
   @JsonProperty("count")
   private Integer count = null;
 
   @JsonProperty("results")
   @Valid
-  private List<Ads> results = null;
+  private List<AdsDto> results = null;
 
-  public ResponseWrapperAds count(Integer count) {
+  public ResponseWrapperAdsDto count( Integer count) {
     this.count = count;
     return this;
   }
@@ -43,14 +43,14 @@ public class ResponseWrapperAds   {
     this.count = count;
   }
 
-  public ResponseWrapperAds results(List<Ads> results) {
+  public ResponseWrapperAdsDto results( List<AdsDto> results) {
     this.results = results;
     return this;
   }
 
-  public ResponseWrapperAds addResultsItem(Ads resultsItem) {
+  public ResponseWrapperAdsDto addResultsItem( AdsDto resultsItem) {
     if (this.results == null) {
-      this.results = new ArrayList<Ads>();
+      this.results = new ArrayList<AdsDto>();
     }
     this.results.add(resultsItem);
     return this;
@@ -62,11 +62,11 @@ public class ResponseWrapperAds   {
    **/
   @Schema(description = "")
       @Valid
-    public List<Ads> getResults() {
+    public List<AdsDto> getResults() {
     return results;
   }
 
-  public void setResults(List<Ads> results) {
+  public void setResults(List<AdsDto> results) {
     this.results = results;
   }
 
@@ -79,7 +79,7 @@ public class ResponseWrapperAds   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ResponseWrapperAds responseWrapperAds = (ResponseWrapperAds) o;
+    ResponseWrapperAdsDto responseWrapperAds = (ResponseWrapperAdsDto) o;
     return Objects.equals(this.count, responseWrapperAds.count) &&
         Objects.equals(this.results, responseWrapperAds.results);
   }

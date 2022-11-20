@@ -13,7 +13,7 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2022-11-20T12:17:45.689Z[GMT]")
 
 
-public class CreateAds   {
+public class CreateAdsDto {
   @JsonProperty("description")
   private String description = null;
 
@@ -29,7 +29,7 @@ public class CreateAds   {
   @JsonProperty("title")
   private String title = null;
 
-  public CreateAds description(String description) {
+  public CreateAdsDto description( String description) {
     this.description = description;
     return this;
   }
@@ -48,7 +48,7 @@ public class CreateAds   {
     this.description = description;
   }
 
-  public CreateAds image(String image) {
+  public CreateAdsDto image( String image) {
     this.image = image;
     return this;
   }
@@ -67,7 +67,7 @@ public class CreateAds   {
     this.image = image;
   }
 
-  public CreateAds pk(Integer pk) {
+  public CreateAdsDto pk( Integer pk) {
     this.pk = pk;
     return this;
   }
@@ -86,7 +86,7 @@ public class CreateAds   {
     this.pk = pk;
   }
 
-  public CreateAds price(Integer price) {
+  public CreateAdsDto price( Integer price) {
     this.price = price;
     return this;
   }
@@ -105,7 +105,7 @@ public class CreateAds   {
     this.price = price;
   }
 
-  public CreateAds title(String title) {
+  public CreateAdsDto title( String title) {
     this.title = title;
     return this;
   }
@@ -133,7 +133,7 @@ public class CreateAds   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CreateAds createAds = (CreateAds) o;
+    CreateAdsDto createAds = (CreateAdsDto) o;
     return Objects.equals(this.description, createAds.description) &&
         Objects.equals(this.image, createAds.image) &&
         Objects.equals(this.pk, createAds.pk) &&

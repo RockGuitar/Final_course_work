@@ -16,15 +16,15 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2022-11-20T12:17:45.689Z[GMT]")
 
 
-public class ResponseWrapperUser   {
+public class ResponseWrapperUserDto {
   @JsonProperty("count")
   private Integer count = null;
 
   @JsonProperty("results")
   @Valid
-  private List<User> results = null;
+  private List<UserDto> results = null;
 
-  public ResponseWrapperUser count(Integer count) {
+  public ResponseWrapperUserDto count( Integer count) {
     this.count = count;
     return this;
   }
@@ -43,14 +43,14 @@ public class ResponseWrapperUser   {
     this.count = count;
   }
 
-  public ResponseWrapperUser results(List<User> results) {
+  public ResponseWrapperUserDto results( List<UserDto> results) {
     this.results = results;
     return this;
   }
 
-  public ResponseWrapperUser addResultsItem(User resultsItem) {
+  public ResponseWrapperUserDto addResultsItem( UserDto resultsItem) {
     if (this.results == null) {
-      this.results = new ArrayList<User>();
+      this.results = new ArrayList<UserDto>();
     }
     this.results.add(resultsItem);
     return this;
@@ -62,11 +62,11 @@ public class ResponseWrapperUser   {
    **/
   @Schema(description = "")
       @Valid
-    public List<User> getResults() {
+    public List<UserDto> getResults() {
     return results;
   }
 
-  public void setResults(List<User> results) {
+  public void setResults(List<UserDto> results) {
     this.results = results;
   }
 
@@ -79,7 +79,7 @@ public class ResponseWrapperUser   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ResponseWrapperUser responseWrapperUser = (ResponseWrapperUser) o;
+    ResponseWrapperUserDto responseWrapperUser = (ResponseWrapperUserDto) o;
     return Objects.equals(this.count, responseWrapperUser.count) &&
         Objects.equals(this.results, responseWrapperUser.results);
   }
