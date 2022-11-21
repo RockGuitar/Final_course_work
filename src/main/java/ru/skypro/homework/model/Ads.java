@@ -1,27 +1,26 @@
 package ru.skypro.homework.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-@Table(name = "user")
 public class Ads {
     @Id
     @GeneratedValue
     private Integer id;
-    private Integer author;
+
+    @ManyToOne
+    @JoinColumn(name = "ad_creator")
+    private User user;
     private String image;
     private Integer price;
     private String title;
 
-    public Integer getAuthor () {
-        return author;
+    public User getUser () {
+        return user;
     }
 
-    public void setAuthor ( Integer author ) {
-        this.author = author;
+    public void setUser ( User user ) {
+        this.user = user;
     }
 
     public String getImage () {

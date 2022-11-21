@@ -1,6 +1,5 @@
 package ru.skypro.homework.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +10,6 @@ public class User {
     @Id
     @GeneratedValue
     private Integer id;
-
     private String email;
     private String firstName;
     private String lastName;
